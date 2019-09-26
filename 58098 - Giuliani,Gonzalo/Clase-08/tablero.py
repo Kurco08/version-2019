@@ -4,8 +4,8 @@ def draw_tablero(tablero):
     print (" " + tablero[3]+" | "+ tablero[4]+" | "+tablero[5])
     print ("---+---+---")
     print (" "+ tablero[6]+" | "+ tablero[7]+" | "+tablero[8])
-def validate(tablero, posicion):
-    return tablero[posicion -1]--""
+def validate(tablero,posicion):
+    return tablero[posicion -1]==" "
 def win(tablero):
     if tablero[0]!=" "and tablero[0]==tablero[4]and tablero[4]==tablero[8]:
         return True
@@ -24,3 +24,5 @@ def win(tablero):
     if tablero[6]!=" "and tablero[6]==tablero[7]and tablero[7]==tablero[8]:
         return True
     return False
+def full(tablero):
+    return not " " in tablero
